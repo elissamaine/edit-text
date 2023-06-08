@@ -33,8 +33,8 @@ module.exports = () => {
         name: 'jate',
         short_name: 'jate',
         description: 'A simple PWA for editing text',
-        background_color: '#ffffff',
-        theme_color: '#ffffff',
+        background_color: '#272822',
+        theme_color: '#272822',
         start_url: './',
         publicPath: './',
         icons: [

@@ -37,6 +37,6 @@
   "display": "standalone",
   "start_url": "./",
   "description": "A simple PWA for editing text",
-  "background_color": "#ffffff",
-  "theme_color": "#ffffff"
+  "background_color": "#272822",
+  "theme_color": "#272822"
 }
