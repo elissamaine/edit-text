@@ -21,15 +21,15 @@ module.exports = () => {
     plugins: [
       new HtmlWebpackPlugin({
         template: './index.html',
-        title: 'edit text PWA',
+        title: 'jate',
       }),
       new InjectManifest({
         swSrc: './src-sw.js',
         swDest: 'sw.js',
       }),
       new WebpackPwaManifest({
-        name: 'edit text PWA',
-        short_name: 'edit-text',
+        name: 'jate',
+        short_name: 'jate',
         description: 'A simple PWA for editing text',
         background_color: '#ffffff',
         theme_color: '#ffffff',
@@ -50,19 +50,20 @@ module.exports = () => {
         {
           test: /\.css$/i,
           use: ['style-loader', 'css-loader'],
-        },
+        }, 
         {
           test: /\.(png|svg|jpg|jpeg|gif)$/i,
           type: 'asset/resource',
-        }, 
+        },
         {
           test: /\.m?js$/,
           exclude: /(node_modules|bower_components)/,
           use: {
             loader: 'babel-loader',
             options: {
-            presets: ['@babel/preset-env'],
-            }
+              presets: ['@babel/preset-env'],
+              plugins: ['@babel/plugin-proposal-object-rest-spread', '@babel/transform-runtime'],
+            },
           }
         }
       ],
